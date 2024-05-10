@@ -5,8 +5,9 @@ import { Button, Drawer, Layout, Menu } from 'antd';
 import { useAppContext } from '@/context/appContext';
 
 import useLanguage from '@/locale/useLanguage';
-import logoIcon from '@/style/images/logo-icon.svg';
-import logoText from '@/style/images/logo-text.svg';
+import logoIcon from '@/style/images/crm.png';
+// import logoIcon from '@/style/images/logo-icon.svg';
+import logoText from '@/style/images/crm.png';
 
 import useResponsive from '@/hooks/useResponsive';
 
@@ -154,10 +155,10 @@ function Sidebar({ collapsible, isMobile = false }) {
           key: 'taxes',
           label: <Link to={'/taxes'}>{translate('taxes')}</Link>,
         },
-        {
-          key: 'about',
-          label: <Link to={'/about'}>{translate('about')}</Link>,
-        },
+        // {
+        //   key: 'about',
+        //   label: <Link to={'/about'}>{translate('about')}</Link>,
+        // },
       ],
     },
   ];
@@ -217,9 +218,9 @@ function Sidebar({ collapsible, isMobile = false }) {
           cursor: 'pointer',
         }}
       >
-        <img src={logoIcon} alt="Logo" style={{ marginLeft: '-5px', height: '40px' }} />
+        <img src={logoIcon} alt="Logo" style={{ marginLeft: '-2px', height: '40px' }} />
 
-        {!showLogoApp && (
+        {/* {!showLogoApp && (
           <img
             src={logoText}
             alt="Logo"
@@ -229,7 +230,7 @@ function Sidebar({ collapsible, isMobile = false }) {
               height: '38px',
             }}
           />
-        )}
+        )} */}
       </div>
       <Menu
         items={items}
